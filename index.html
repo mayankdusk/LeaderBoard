@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leaderboards</title>
+
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/d521bbec8a.js" crossorigin="anonymous"></script>
+
+    <!-- Scripts -->
+    <script src="model.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body class="w-screen min-h-screen px-4 py-8">
+    <!-- All content -->
+    <div class="max-w-6xl mx-auto">
+        <!-- Heading -->
+        <h1 class="mb-4 text-3xl font-bold">Leaderboard Table</h1>
+
+        <!-- Form -->
+        <form class="flex flex-wrap justify-between gap-2 mb-4" id="form">
+            <input type="text" placeholder="First name" class="input input-bordered w-1/5 min-w-[110px]" />
+            <input type="text" placeholder="Last name" class="input input-bordered w-1/5 min-w-[110px]" />
+            <input type="text" placeholder="Country" class="input input-bordered w-1/5 min-w-[110px]" />
+            <input type="number" placeholder="Score" class="input input-bordered w-1/5 min-w-[110px]" />
+            <button class="btn btn-primary w-1/12 min-w-[100px]" type="submit">
+                Add
+            </button>
+        </form>
+
+        <!-- Validation -->
+        <p id="validation" class="py-2 font-bold text-center text-red-600 duration-100 opacity-0">
+           <b>Please fill in all fields</b>
+        </p>
+
+        <!-- Table -->
+        <div class="overflow-x-auto">
+            <table class="table table-zebra">
+                <!-- Table head -->
+                <thead class="text-base text-center">
+                    <tr>
+                        <th>Name</th>
+                        <th>Country</th>
+                        <th>Score</th>
+                        <th></th>
+                    </tr>
+                </thead>
+
+                <!-- Table body -->
+                <tbody class="text-lg font-medium text-center duration-300 opacity-0 text-neutral" id="tbody">
+                    <!-- Data is rendered here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
